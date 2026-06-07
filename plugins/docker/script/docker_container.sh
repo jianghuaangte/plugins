@@ -164,7 +164,7 @@ __show_network()
 {
 	local network
 	if network=$(ikdocker network_get_name) ;then
-		# network=$(echo "$network" | jq '. + ["host"]') # 添加host网络支持
+		network=$(echo "$network" | jq '. + ["host"]') # 添加host网络支持
 		json_append __json_result__ network:json
 	else
 		echo $network
