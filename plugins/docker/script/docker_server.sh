@@ -191,7 +191,7 @@ __start_dockerd()
 		registry_mirrors=",\"registry-mirrors\":[\"https://docker.1ms.run/\"]"
 	fi
 
-	__check_config_json
+	#__check_config_json
 
 	ulimit -n 10240
 
